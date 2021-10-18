@@ -9,9 +9,9 @@ class App extends Component {
     return (
       <BrowserRouter>
         <Switch>
-          <Route exact path="/" component={ Home } />
-          <Route exact path="/About" component={ About } />
           <Route exact path="/Users/:id" render={ (props) => <Users { ...props } greetingsMessage="Good Morning"/> } />
+          <Route exact path="/About" component={ About } />
+          <Route exact path="/" component={ Home } />
         </Switch>
         <ul>
           <li><Link to="/"> Home </Link></li>
